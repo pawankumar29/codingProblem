@@ -1,10 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-
+int inv=0;
 
 void merge (int a[],int start,int end,int mid){
-
+ cout<<"pawan"<<endl;
    int n1=mid-start+1;  // creating space according to the
    int n2=end-mid;
 
@@ -25,13 +25,13 @@ void merge (int a[],int start,int end,int mid){
             for(i=0;i<n1;i++){
 
                array1[i]=a[start+i];
-
+                 cout<<"arr1-->"<<array1[i]<<endl;
             }
 
 
             for(j=0;j<n2;j++){
                array2[j]=a[mid+1+j];
-
+                 cout<<"arr2-->"<<array2[j]<<endl;
             }
 
 
@@ -44,7 +44,10 @@ void merge (int a[],int start,int end,int mid){
    while(i<n1&&j<n2){
 
        if(array1[i]>array2[j]){
+       cout<<"{"<<array1[i]<<","<<array2[j]<<"}"<<endl;
 
+         inv+=n2-j;
+            cout<<"int--->"<<inv<<endl;
           a[k++]=array1[i];
            i++;
        }
@@ -118,7 +121,7 @@ int main(){
       cout<<a[i]<<" ";
     }
 
-
+    cout<<inv;
 
   return 0;
 
